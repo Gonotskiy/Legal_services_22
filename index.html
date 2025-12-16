@@ -239,6 +239,51 @@
                 gap: 40px;
              }
         }
+
+        /* --- Стили для новой фиксированной кнопки WhatsApp --- */
+        .fixed-contact-widget {
+            position: fixed;
+            right: 20px; /* Справа */
+            bottom: 20px; /* Снизу */
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end; /* Выравнивание элементов справа */
+        }
+
+        .whatsapp-fixed-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 55px; /* Маленький размер */
+            height: 55px;
+            background-color: var(--accent-color); /* Желтый цвет */
+            color: var(--primary-color);
+            border-radius: 50%;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            font-size: 2em; /* Размер иконки */
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .whatsapp-fixed-button:hover {
+            background-color: #ffdb58; /* Светлее при наведении */
+            transform: scale(1.1);
+        }
+
+        .phone-fixed-number {
+            margin-top: 10px;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            font-style: italic; /* Курсив */
+            font-size: 1em;
+            text-decoration: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            white-space: nowrap; /* Не дает номеру переноситься */
+        }
+        /* --------------------------------------------------- */
     </style>
 </head>
 <body>
@@ -390,6 +435,14 @@
         <p>© 2025 Юридический партнер. Все права защищены. <br> </p>
     </footer>
 
+    <div class="fixed-contact-widget">
+        <a href="https://wa.me/79836003591" target="_blank" class="whatsapp-fixed-button" title="Написать в WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+79836003591" class="phone-fixed-number">
+            8 (983) 600-35-91
+        </a>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
         // Анимация появления секций
